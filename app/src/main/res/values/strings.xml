@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">otro_proyecto</string>
+    <string name="tv0">Iniciar sesión:</string>
+    <string name="tv2">Home Security</string>
+    <string name="tv4">Selecciona una comunidad</string>
+    <string name="tv5">De:</string>
+    <string name="tv10">Proporciona tu nombre</string>
+    <string name="tv6">Selecciona una comunidad</string>
+    <string name="tv7">Comunidad:</string>
+    <string name="tv8">¿Olvidaste tu contraseña?</string>
+    <string name="tv9">Regístrate</string>
+    <string name="tv13">Nombres:</string>
+    <string name="tv14">Apellidos:</string>
+    <string name="tv15">Registra tus Datos</string>
+    <string name="fono1">Teléfono:</string>
+    <string name="pin3">Código PIN:</string>
+    <string name="box1">Aceptar términos y condiciones</string>
+    <string name="password">Ingresa aquí tu PIN</string>
+    <string name="bt1">ALERTAR</string>
+    <string name="bt2">Policía</string>
+    <string name="bt3">Serenazgo</string>
+    <string name="bt4">Cerrar Sesión</string>
+    <string name="btr">Guardar registro</string>
+
+</resources>

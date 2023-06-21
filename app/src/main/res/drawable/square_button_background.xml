@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#C51C1C" /> <!-- Cambia el color según tus preferencias -->
+        <corners android:radius="0dp" /> <!-- Establece un radio de esquina de 0dp para tener bordes cuadrados -->
+    </shape>
+</selector>

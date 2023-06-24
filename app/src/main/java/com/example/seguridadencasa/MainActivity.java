@@ -3,6 +3,8 @@ package com.example.seguridadencasa;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,9 +75,11 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 String pin = s.toString();
                 if (pin.length() == 6) {
-
-                    Intent siguiente = new Intent(MainActivity.this, DisplayAlarma.class);
-                    startActivity(siguiente);
+                    if(validarPin(pin)){
+                        irEmergencia(pin);
+                    }else{
+                        Toast.makeText(MainActivity.this, "El pin ingresado no es correcto", Toast.LENGTH_SHORT).show();
+                    }
 
                 }
             }
@@ -84,11 +89,54 @@ public class MainActivity extends AppCompatActivity {
     public void IrValidarPhone(View view){
         Intent intent = new Intent(this, ValidarTelefono.class);
         startActivity(intent);
+        finish();
     }
 
     public void IrRegistrar(View view){
         Intent intent = new Intent(this, NuevoUsuario.class);
         startActivity(intent);
+        finish();
+
     }
 
+    public boolean validarPin(String pin){
+        DataBase_HomeSecurity bd = new DataBase_HomeSecurity(this, "Administracion", null, 1);
+        SQLiteDatabase gestor = bd.getWritableDatabase();
+
+        Cursor fila = gestor.rawQuery("Select pin from Vecino", null);
+
+        if(fila.moveToFirst()){
+            do{
+                if(pin.equals(fila.getString(0))){
+                    gestor.close();
+                    return true;
+                }
+            }while(fila.moveToNext());
+        }else{
+            Toast.makeText(this, "Debes registrarte", Toast.LENGTH_SHORT).show();
+        }
+
+        gestor.close();
+        return false;
+    }
+
+    public void irEmergencia(String pin){
+        //DataBase_HomeSecurity bd = new DataBase_HomeSecurity(this, "Administracion", null, 1);
+        //SQLiteDatabase gestor = bd.getWritableDatabase();
+
+        //Cursor fila = gestor.rawQuery("Select nombres, apellidos, idComuna from Vecino where pin="+pin, null);
+        //gestor.close();
+
+        Intent siguiente = new Intent(this, DisplayAlarma.class);
+        //siguiente.putExtra("nbs",fila.getString(0));
+        //siguiente.putExtra("apll",fila.getString(1));
+        //siguiente.putExtra("idc",fila.getString(2));
+        startActivity(siguiente);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

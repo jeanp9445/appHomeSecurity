@@ -10,10 +10,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class DisplayAlarma extends AppCompatActivity {
 
     private Button bt1,bt2;
+    //private TextView tv1, tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class DisplayAlarma extends AppCompatActivity {
 
         bt1 = (Button) findViewById(R.id.bt2);
         bt2 = (Button) findViewById(R.id.bt3);
+        //tv1 = (TextView) findViewById(R.id.deNom);
+        //tv2 = (TextView) findViewById(R.id.nomCom);
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +65,11 @@ public class DisplayAlarma extends AppCompatActivity {
 
             }
         });
+
+        //String nomb = getIntent().getStringExtra("nbs");
+        //String apl = getIntent().getStringExtra("apll");
+        //String ico = getIntent().getStringExtra("idc");
+
+        //tv1.setText(nomb);
     }
 }

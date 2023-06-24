@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,26 @@
     android:background="#0D0A1E"
     tools:context=".MainActivity">
 
+    <VideoView
+        android:id="@+id/vivi1"
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+
+        android:layout_marginTop="405dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginBottom="350dp"
         android:onClick="IrValidarPhone"
         android:text="@string/tv8"
         android:textColor="#2B4DFF"
@@ -24,8 +39,13 @@
         android:id="@+id/et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="431dp"
         android:text="@string/tv0"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -36,7 +56,9 @@
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="52dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="numberPassword"
@@ -49,19 +71,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et1" />
 
-    <VideoView
-        android:id="@+id/vivi1"
-        android:layout_width="410dp"
-        android:layout_height="250dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        android:layout_width="94dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="707dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="3dp"
         android:onClick="IrRegistrar"
         android:text="@string/tv9"
         android:textColor="#2B4DFF"
@@ -72,12 +93,17 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="234dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="90dp"
+        android:layout_width="198dp"
+        android:layout_height="208dp"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv8"
         app:srcCompat="@mipmap/escudo" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -11,4 +11,9 @@ public class ValidarTelefono extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_validar_telefono);
     }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }

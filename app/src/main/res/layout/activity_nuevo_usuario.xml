@@ -11,8 +11,9 @@
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="102dp"
         android:drawableRight="@drawable/escudotres"
         android:drawablePadding="20dp"
         android:gravity="center_vertical"
@@ -22,7 +23,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et15" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spin1"
         android:layout_width="270dp"
         android:layout_height="33dp"
         android:layout_marginTop="30dp"
@@ -85,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tv13"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -138,33 +139,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spin1" />
 
     <TextView
         android:id="@+id/et15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="102dp"
         android:text="@string/tv15"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+        app:layout_constraintTop_toBottomOf="@+id/vv2" />
 
     <Button
         android:id="@+id/btR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
+        android:onClick="CrearRegistro"
         android:text="@string/btr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/box1" />
+
+    <VideoView
+        android:id="@+id/vv2"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

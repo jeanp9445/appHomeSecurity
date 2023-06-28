@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#0D0A1E"
     tools:context=".NuevoUsuario">
-
     <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"

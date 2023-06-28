@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#0D0A1E"
     tools:context=".DisplayAlarma">
+
     <Button
         android:id="@+id/bt2"
         android:layout_width="190dp"

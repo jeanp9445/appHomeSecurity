@@ -47,7 +47,6 @@
         android:layout_marginTop="260dp"
         android:layout_marginBottom="481dp"
         android:text="@string/tv0"
-
         android:textColor="#FFFFFF"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintStart_toStartOf="parent"

@@ -98,28 +98,36 @@
         style="@style/SquareButtonStyle"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="#919191"
         android:gravity="center"
         android:text="@string/bt4"
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/multiT1" />
+        app:layout_constraintTop_toBottomOf="@+id/multiT1"
+        app:layout_constraintVertical_bias="0.166" />
 
     <EditText
         android:id="@+id/multiT1"
         android:layout_width="340dp"
         android:layout_height="149dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="#777777"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deNom" />
+        app:layout_constraintTop_toBottomOf="@+id/deNom"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imgboton1"
